@@ -1,0 +1,29 @@
+#include <iostream>
+#include <fstream>
+#include <math.h>
+#include <stdio.h>
+using namespace std;
+
+int main()
+{
+    int fromFileNumber;
+    ofstream f_output;
+    ifstream f_input;
+    f_input.open("data.txt.txt");
+    f_input>>fromFileNumber;
+    int userNumber, sum = 0;
+    for (sum=0; sum<=fromFileNumber;)
+    {
+        scanf("%d", &userNumber);
+     if(userNumber % 2 == 0)
+     sum += userNumber;
+     
+   // {
+        
+   //     if(userNumber % 2 == 0)
+   //     sum += userNumber;
+   // }
+    
+    }
+    return 0;
+}
