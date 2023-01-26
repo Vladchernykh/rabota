@@ -7,18 +7,12 @@ int main()
 {
 	const int N = 10;
 	int M[N];
-		int l = 0;
-		for (int i = 0; i < N; i++)
-		{
-			cin >> M[i]; // ввод чисел в массив
-		}
+	double l = 0;
+	for (int i = 0; i < N; i++)
+		cin >> M[i]; // ввод чисел в массив
 
-		for (int i = 0; i < N; i++) 
-		{
-			cout << "X[" << i + 1 << "]" << ": ";
-			cin >> M[i];
-			M = l+ M[i];
-		}
-		cout << "Мат.ожидание = " << M / N;
-		return 0;
+	for (int i = 0; i < N; i++)
+		l += M[i];
+	cout << "Мат.ожидание = " << (l / N);
+	return 0;
 }
