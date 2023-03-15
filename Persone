@@ -1,0 +1,45 @@
+#include<iostream>
+
+
+using namespace std;
+
+class Person
+{
+private:
+    char name;
+    int age;
+    int height;
+    int weight;
+public:
+    void set()
+    {
+        cout << "name";
+        cin >> name;
+
+        cout << "age";
+        cin >> age;
+
+        cout << "height";
+        cin >> height;
+
+
+        cout << "weight";
+        cin >> weight;
+    }
+    void show()
+    {
+        cout << "Your name is: " << name << endl;
+        cout << "Your age is: " << age << endl;
+        cout << "Your height  is: " << height << endl;
+        cout << "Your weight  is: " << weight << endl;
+    }
+    int main()
+    {
+        Person number1;
+        number1.set();
+
+        number1.show();
+        system("pause");
+        return 0;
+    }
+}
