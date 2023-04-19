@@ -1,0 +1,33 @@
+#include <iostream>
+#include <fstream>
+#include <math.h>
+#include <stdio.h>
+using namespace std;
+
+int main()
+{
+	fstream fout;
+	fout.open("startgame.txt");
+	fout << 520;
+	int chislo, ugadai, newParam;
+	fout.close();
+	fout.open("startgame.txt");
+	fout >> newParam;
+	cout << newParam;
+	fout.close();
+
+
+	for (ugadai = 0; ugadai <= newParam;)
+	{
+		cin >> ugadai;
+		if (ugadai != newParam)
+		cout << "неправильное число";
+		else if (ugadai = newParam);
+		{
+			cout << "вы угадали";
+			cout << newParam << endl;
+	     }
+	}
+	return 0;
+}
+    
