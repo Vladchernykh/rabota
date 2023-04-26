@@ -32,9 +32,10 @@ int main()
 	}*/
 	while (ugadai != newParam) {
 		cin >> ugadai;
-		fout << ""
-		fout << "введенные числа:";
+		fout << "\n";
+		fout << "было введено:";
 	    fout << ugadai;
+		fout << ".";
 		if (ugadai < newParam)
 			cout << "меньше";
 		if (ugadai > newParam)
@@ -44,3 +45,4 @@ int main()
 	}
 	return 0;
 }
+
