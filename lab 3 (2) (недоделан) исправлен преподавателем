@@ -1,0 +1,46 @@
+#include <iostream>
+#include <fstream>
+#include <math.h>
+#include <stdio.h>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	fstream fout;
+	fout.open("startgame.txt");
+	fout << 520;
+	int chislo, ugadai = 0, newParam;
+	fout.close();
+	fout.open("startgame.txt");
+	fout >> newParam;
+	fout.close();
+	fout.open("startgame.txt");
+
+
+
+	/*for (ugadai = 0; ugadai <= newParam;)
+	{
+		cin >> ugadai;
+		if (ugadai != newParam) {
+			cout << "неправильное число";
+		}
+		else if (ugadai == newParam);
+		{
+			cout << ugadai << endl;
+			cout << "вы угадали";
+		}
+	}*/
+	while (ugadai != newParam) {
+		cin >> ugadai;
+		fout << ""
+		fout << "введенные числа:";
+	    fout << ugadai;
+		if (ugadai < newParam)
+			cout << "меньше";
+		if (ugadai > newParam)
+			cout << "больше";
+		if (ugadai == newParam)
+			cout << "поздр";
+	}
+	return 0;
+}
