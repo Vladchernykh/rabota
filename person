@@ -37,10 +37,10 @@ public:
 
 int main()
 {
-    Human *Misha = new Human(60, 180, "Aleksandr", "Russian", male, 24);
-    Aleksandr->say("Nazar", "Privet!");
+    Human *Aleksandr = new Human(60, 180, "Aleksandr", "Russian", male, 24);
+    Aleksandr->say("Sonya", "Privet!");
 
-    Misha->changeSex();
+    Aleksandr->changeSex();
     cout << Aleksandr->sex;
 
     Aleksandr->changeAge(25);
