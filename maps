@@ -1,0 +1,58 @@
+#include <iostream>
+#include <map>
+
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+
+    int chto,chtoto;
+    std::string en,ru;
+    
+    std::map<std::string, std::string> l;
+
+    l["cat"] = "кот";
+
+    std::cout << "Что вы хотите сделать? Добавить слово (1). Посмотреть перевод слов (2)" << std::endl;
+    std::cin >> chto;
+    if (chto == 2) {
+        std::cout << "С какого языка вы хотите перевести 1 ру 2 англ" << std::endl;
+        std::cin >> chtoto;
+        if (chtoto == 2) {
+            std::cout << "Enter word: " << std::endl;
+            std::cin >> en;
+            std::cout << en << " - " << l[en] << std::endl;
+        }
+        else if (chtoto == 1) {
+            std::cout << "Введите слово: " << std::endl;
+            std::cin >> ru;
+            std::cout << ru << " - " << l[ru] << std::endl;
+        }
+        else {
+            std::cout << "bb";
+        }
+    }
+    else if (chto == 1) {
+
+        std::fstream logs;
+        logs.open("file.txt", std::ios::app);
+
+        std::map<std::string, std::string> k;
+        std::string en;
+        std::string ru;
+        std::cout << "Напишите слово на английском: ";
+        std::cin >> en;
+        std::cout << "Напишите слово на русском: ";
+        std::cin >> ru;
+        dictionary_user[en] = ru;
+        dictionary_user[ru] = en;
+
+        logs << en << " " << ru << std::endl;
+
+        std::cout << en << " - " << ru << std::endl;
+    }
+    else
+    {
+        std::cout << "incorrect";
+    }
+}
